@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <title>鷲見結希：個人プロファイル</title>
     <style>
-        /* 1. フォント読み込み：Base64データは君の持っているものをここに貼ってね */
-    @font-face {
-    font-family: 'Makinas4';
-    src: url('./Makinas-4-Square.otf') format('opentype');
-}
+        @font-face {
+            font-family: 'Makinas4';
+            src: url('./Makinas-4-Square.otf') format('opentype');
+        }
+
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             background-color: #0d1117; /* 深海のような黒 */
             color: #d1d5db;
-            font-family: 'Makinas4';
+            font-family: 'Makinas4', sans-serif;
             line-height: 1.8;
-            padding: 30px;
+            padding: 20px;
             margin: 0;
             overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* --- 起動アニメーション設定 --- */
@@ -64,6 +69,7 @@
             font-weight: bold; 
             border-bottom: 1px solid #30363d; 
             margin-bottom: 20px; 
+            padding-bottom: 5px;
         }
 
         .section-title { 
@@ -83,11 +89,23 @@
             margin-top: 20px;
             border-radius: 4px;
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
+            max-width: 100%;
         }
 
         a { color: #58a6ff; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        img { border-radius: 8px; margin-bottom: 5px; }
+        img { border-radius: 8px; margin-bottom: 5px; max-width: 100%; height: auto; }
+
+        .sns-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .sns-item {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -113,356 +131,335 @@
         年齢：16歳（2026年3月現在）<br>
         趣味：ゲーム、機械、アニメ<br>
         特技：PC、ゲーム、電子機器の操作<br>
-学年：1年生(留年)<br>
+        学年：1年生(留年)<br>
 
         <span class="section-title">【 特殊ステータス 】</span>
         体質：TS体質（激カワ男の娘 ⇔ 超絶アニメ顔美少女）<br>
-<div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 15px;">
-    <table style="flex: 1; border-collapse: collapse;">
-        </table>
-
-<div style="display: flex; gap: 10px;">
-    <div style="text-align: center;">
-        <img src="./無題150_20260321011203.PNG" 
-             alt="Before(立ち絵がまだなので仮ビジュ)" style="width: 120px; height: 160px; object-fit: cover; border: 1px solid #333;">
-        <p style="font-size: 0.7em; color: #555;">NORMAL(立ち絵がまだなので仮ビジュ)</p>
-    </div>
-    <div style="text-align: center;">
-        <img src="./無題148_20260321011051.PNG" 
-             alt="After(立ち絵がまだなので仮ビジュ)" style="width: 120px; height: 160px; object-fit: cover; border: 1px solid #333;">
-        <p style="font-size: 0.7em; color: #555;">TS-ACTIVE(立ち絵がまだなので仮ビジュ)</p>
-    </div>
-</div>
+        
+        <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+            <div style="text-align: center;">
+                <img src="./無題150_20260321011203.PNG" 
+                     alt="Before" style="width: 120px; height: 160px; object-fit: cover; border: 1px solid #333;">
+                <p style="font-size: 0.7em; color: #555;">NORMAL(仮ビジュ)</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="./無題148_20260321011051.PNG" 
+                     alt="After" style="width: 120px; height: 160px; object-fit: cover; border: 1px solid #333;">
+                <p style="font-size: 0.7em; color: #555;">TS-ACTIVE(仮ビジュ)</p>
+            </div>
+        </div>
         目標：Unknown<br>
 
-     <span class="section-title">【 現在装備：EQUIPMENT 】</span>
-    ■ インナーマッスルスーツ：エンチャンター (enchanter)<br>
-    ・本体重量：1.52kg / 耐荷重：92トン<br>
-    ・最大推進力：12トン / 稼働時間：最大11ヶ月<br>
-    <br>
-    ■ 近接武装：高周波振動刀「星今宵（ホシコヨイ）」<br>
-    ・振動数：ペタHz単位 / 刃紋：三日月・天の川状<br>
-    ・稼働色：通常時（翠）/ 最大稼働時（桜）<br>
-    <br>
-    ■ ABE-115L アマツカゼ軽 (Amatsukaze-Kei)<br>
-    　- インナーマッスルスーツ「エンチャンター」の上層に装備するEXギア発展型兵装。<br>
-    　- 推進系：熱核惑星ロケットエンジン×3（2次元推力偏向ノズル搭載）<br>
-    　- 動力系：Pリアクター×2 ＋ プラネットコンデンサ<br>
-    　- 武装：側頭部パルスレーザーバルカン ＋ 各種携行兵装<br>
-    　[ PARAMETER ] 推進力：19.8t / 全備重量：1.5t / 接続：ユニバーサル規格<br>
-    <br>
+        <span class="section-title">【 現在装備：EQUIPMENT 】</span>
+        ■ インナーマッスルスーツ：エンチャンター (enchanter)<br>
+        ・本体重量：1.52kg / 耐荷重：92トン<br>
+        ・最大推進力：12トン / 稼働時間：最大11ヶ月<br>
+        <br>
+        ■ 近接武装：高周波振動刀「星今宵（ホシコヨイ）」<br>
+        ・振動数：ペタHz単位 / 刃紋：三日月・天の川状<br>
+        ・稼働色：通常時（翠）/ 最大稼働時（桜）<br>
+        <br>
+        ■ ABE-115L アマツカゼ軽 (Amatsukaze-Kei)<br>
+        　- インナーマッスルスーツ「エンチャンター」の上層に装備するEXギア発展型兵装。<br>
+        　- 推進系：熱核惑星ロケットエンジン×3（2次元推力偏向ノズル搭載）<br>
+        　- 動力系：Pリアクター×2 ＋ プラネットコンデンサ<br>
+        　- 武装：側頭部パルスレーザーバルカン ＋ 各種携行兵装<br>
+        　[ PARAMETER ] 推進力：19.8t / 全備重量：1.5t / 接続：ユニバーサル規格<br>
+        <br>
 
-    <span class="section-title">【 FIREARMS：銃火器・近接兵装 】</span>
-    ■ 「グリント」(Glint)<br>
-    　- 電磁加速機構搭載カービン。OLEDモニターで状況管理し、ジェネレーターで加速用エネルギーを生成。 (Base: M4A1)<br>
-    　[ PARAMETER ] 威力：A / 貫徹力：S / 信頼性：EX<br>
-    <br>
+        <span class="section-title">【 FIREARMS：銃火器・近接兵装 】</span>
+        ■ 「グリント」(Glint)<br>
+        　- 電磁加速機構搭載カービン。OLEDモニターで状況管理し、ジェネレーターで加速用エネルギーを生成。 (Base: M4A1)<br>
+        　[ PARAMETER ] 威力：A / 貫徹力：S / 信頼性：EX<br>
+        <br>
+        ■ 狙撃銃「Arcange」(蔑称:ArcLight)<br>
+        　- 初速3756.4km/m突破の電磁加速狙撃銃。FCS連携スコープ搭載。 (Base: L96)<br>
+        　[ PARAMETER ] 射程：SSS / 初速：マッハ3+ / 精度：A+<br>
+        <br>
+        ■ 散弾銃「タイラント」(tyrant)<br>
+        　- 特殊強装弾対応、職人による給弾加工や新型拡散システムと機械式ショットシェル加速システム搭載。 (Base: SuperSSII)<br>
+        　[ PARAMETER ] 近接火力：S / 装填速度：A / 剛性：A<br>
+        <br>
+        ■ 自動拳銃「ハレイション」(Halation)<br>
+        　- 試験中の新型ナノダイヤポリカーボネート換装。 (Base: G18C)<br>
+        　[ PARAMETER ] 携行性：S / 信頼性：SS / 操作性：A<br>
+        <br>
+        ■ 高周波振動刀「星今宵（ホシコヨイ）」<br>
+        　- ペタHz振動による分子結合分断。通常時：翠 / 最大稼働時：桜色。<br>
+        　[ PARAMETER ] 斬れ味：測定不能 / ロマン：限界突破 / 芸術性：SSS<br>
 
-    ■ 狙撃銃「Arcange」(蔑称:ArcLight)<br>
-    　- 初速3756.4km/m突破の電磁加速狙撃銃。FCS連携スコープ搭載。 (Base: L96)<br>
-    　[ PARAMETER ] 射程：SSS / 初速：マッハ3+ / 精度：A+<br>
-    <br>
-
-    ■ 散弾銃「タイラント」(tyrant)<br>
-    　- 特殊強装弾対応、職人による給弾加工や新型拡散システムと機械式ショットシェル加速システム搭載。 (Base: SuperSSII)<br>
-    　[ PARAMETER ] 近接火力：S / 装填速度：A / 剛性：A<br>
-    <br>
-
-    ■ 自動拳銃「ハレイション」(Halation)<br>
-    　- 試験中の新型ナノダイヤポリカーボネート換装。 (Base: G18C)<br>
-    　[ PARAMETER ] 携行性：S / 信頼性：SS / 操作性：A<br>
-    <br>
-
-    ■ 高周波振動刀「星今宵（ホシコヨイ）」<br>
-    　- ペタHz振動による分子結合分断。通常時：翠 / 最大稼働時：桜色。<br>
-    　[ PARAMETER ] 斬れ味：測定不能 / ロマン：限界突破 / 芸術性：SSS<br>
-
-    <span class="section-title">【 SNS LINKS：電脳活動拠点 】</span>
-    <div style="margin-top: 15px;">
-        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" width="60" height="60" alt="X_Twitter"><br>
-            <a href="https://x.com/hazukiyuuuki144" target="_blank">Twitter</a>
+        <span class="section-title">【 SNS LINKS：電脳活動拠点 】</span>
+        <div class="sns-container">
+            <div class="sns-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" width="60" height="60" alt="X_Twitter"><br>
+                <a href="https://x.com/hazukiyuuuki144" target="_blank">Twitter</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://pbs.twimg.com/profile_images/1796082052703436801/9cOn5C3M_400x400.jpg" width="60" height="60" alt="Discord"><br>
+                <a href="https://discord.gg/DWrywpXD" target="_blank">Discord</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://pbs.twimg.com/profile_images/1796082052703436801/9cOn5C3M_400x400.jpg" width="60" height="60" alt="Discordサーバー"><br>
+                <a href="https://discord.gg/ydT9ftsGsb" target="_blank">惑星ルビコン2026</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://cdn.discordapp.com/attachments/1454736510124556392/1558102442892075091/214_20261009220104.png" width="60" height="60" alt="github"><br>
+                <a href="https://hdkyuuuki144.github.io/LocalMulti-Enigmatic-tool-Encrypted/" target="_blank">暗号等マルチツール</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/1280px-Bluesky_Logo.svg.png" width="60" height="60" alt="Bluesky"><br>
+                <a href="https://bsky.app/profile/hdkyuuki144.bsky.social" target="_blank">Bluesky</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1280px-Instagram_icon.png" width="60" height="60" alt="Instagram"><br>
+                <a href="https://www.instagram.com/hdkyuuuki256?igsh=MWRuZm9iMmpsZGJ3ZA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="60" height="60" alt="YouTube"><br>
+                <a href="https://www.youtube.com/@yuuukihazuki_kai2" target="_blank">YouTube</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="60" height="60" alt="YouTube視聴垢"><br>
+                <a href="https://www.youtube.com/@hazukiyuuki_144watch" target="_blank">YouTube 視聴垢</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://prtimes.jp/data/corp/137834/logo/pc-4a9a3b12290f39157f07093cc4da5b7b-8af99f7f3780308d19df97d0936194af.png" width="60" height="60" alt="Misskey"><br>
+                <a href="https://misskey.io/@hdkyuuuki144" target="_blank">Misskey</a>
+            </div>
+            <div class="sns-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGE9xGgsCYoXs0_m4za_IanQe5hMI2tzH_Lh23BcXMQ&s=10" width="60" height="60" alt="NicoNico"><br>
+                <a href="https://www.nicovideo.jp/user/128581420" target="_blank">NicoNico</a>
+            </div>
         </div>
-        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://pbs.twimg.com/profile_images/1796082052703436801/9cOn5C3M_400x400.jpg" width="60" height="60" alt="Discord"><br>
-            <a href="https://discord.gg/DWrywpXD" target="_blank">Discord</a>
+
+        <div class="server-board">
+            <h2 style="color: #00ff41; border-bottom: 1px solid #00ff41; padding-bottom: 5px; margin-top: 0;">
+                🛰️ SYSTEM STATUS: TUNE
+            </h2>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 8px; font-weight: bold; color: #888;">IP ADDRESS</td>
+                    <td style="padding: 8px; font-family: monospace;">61.21.137.107:25565</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 8px; font-weight: bold; color: #888;">VERSION</td>
+                    <td style="padding: 8px;">1.26(JAVA Edition)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 8px; font-weight: bold; color: #888;">ENGINE</td>
+                    <td style="padding: 8px;">Paper (Optimized)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 8px; font-weight: bold; color: #888;">CAPACITY</td>
+                    <td style="padding: 8px;">Max 35 Units</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 8px; font-weight: bold; color: #888;">DIFFICULTY</td>
+                    <td style="padding: 8px;">休止中</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; font-weight: bold; color: #888;">SPAWN POINT/CONTACT</td>
+                    <td style="padding: 8px;">X: 0 / Z: 0 (Central Hub)<br>hazuki.yuuki.144@gmail.com</td>
+                </tr>
+            </table>
+
+            <div style="margin-top: 20px; font-size: 0.8em; color: #555; text-align: right;">
+                Logged at: 2026.03.24 13:42 // Command Unit
+            </div>
         </div>
-        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://pbs.twimg.com/profile_images/1796082052703436801/9cOn5C3M_400x400.jpg" width="60" height="60" alt="Discord"><br>
-            <a href="https://discord.gg/ydT9ftsGsb" target="_blank">サーバー 惑星ルビコン2026</a>
+
+        <span class="section-title">【 独自改良機:VF-31Xsグードルーン 】</span>
+        VF-31Xs グードルーン<br><br>
+        設計&開発:BIGBOSS社 銀河工廠 アンタレスワークス コノエエンジニアズ<br>
+        製造:BIGBOSS社 VF系機体製造部門<br>
+        搭載エンジン:BIGBOSS/新星/八ツ菱 ステージ2S FF-3003X/FC3 惑星波動核融合式還流タービンエンジン×4<br>
+        全高(ファイター):3.86m<br>
+        全高(バトロイド、頭部機銃含まず):15.34m<br>
+        全長(ファイター):19.31m<br>
+        全幅(ファイター):14.86m<br>
+        空虚重量(全種類の燃料満載 マルチパーパスコンテナなし 武装全搭載 追加パックなし)<br>
+        S・C・A型:7558kg<br>
+        F・E型:7671kg<br>
+        S型結希機:7869kg<br>
+        慣性制御:BIGBOSS ISC-52X(最大設計限界速度の3倍のGを12年間貯蔵可能)<br>
+        慣性制御:機体構造材(の素材による副次的な超高性能ISC機能)とコクピット周辺にコーティングされたGN粒子<br>
+        副機:F305改Nano 高機動ヴァリアブルバーニアスラスター スラストリバーサー&3D高機動ノズル<br>
+        通常時最高速:M11+<br>
+        ワープアフターバーナー/ワープ/フォールド航法時最高速:光速の550万倍<br>
+        最大設計限界速度:光速の893万倍<br>
+        使用燃料:1ccの吸気した空気(9ヶ月) 0.1ccの真空(真空からエンジンが波動エネルギーとしてもエネルギーを取り出しているため12ヶ月と50時間) 高濃度高圧縮液化水酸(空間機動時の副機スラスター用 下手に動かしまくっても10ヶ月は持つ)<br>
+        構造材:S²CM²VPS・エネルギー転換対応型サイコフレーム・粒子状フォールドクォーツ混合型<br>
+        装甲:S²CM²基本式エネルギー転換・斥力装甲<br>
+        OS:ウリエル バージョンヴェイタ<br>
+        操縦系:EXギア またはアマツカゼ軽、アマツカゼシステム<br>
+        機能:分子構造変化式皮膜によるカラー変更機能(光学迷彩としても使用可能でパーソナルマークも印刷可能)<br>
+        機能:擬似全天周モニター(VF-31AXとほぼ同じだが、インターフェースの改良や既存の操作インターフェースを活用し、空中投影してるような表示にし、戦闘を妨げないようにしている。)<br>
+        隠し機能(結希機のみ):ブルートモード<br>
+        頭部のバイザーセンサが格納されツインアイが露出、フェイスマスクが展開。人の口を想起させるような形状と口腔内からの強制排気で、さながら獣のように振る舞う。<br>
+        結希機のみに実装された機能で、脚部のエンジン出力が上昇し、形態はバトロイドに固定される。<br>
+
+        <span class="section-title">【 バリエーション 】</span>
+        S型:指揮官機で、頭部形状はYF-29を想起させる。主に通信能力と指揮管制能力の向上、電子戦機との連携能力向上と、エンジン周りと駆動系のソフトウェアリミッター解除が実施される他、ファイター形態とバトロイド形態時、専用ソフトウェアにより一般機と比較して最大115%の能力向上が見込める<br>
+        S型結希機:蔑称、あの世行きの翡翠色の切符。この機体がそう呼ばれる所以は専用モデルとしてあつらえられ、その上最適化がこの上ないほど施された機体が結希を持つと他の機より比べ物にならないほど被害を出すためである。<br>
+        頭部形状に差異はないが、バイザーセンサー内にツインアイを搭載しており、フェイスマスクの展開変形機構も有している他、通常のS型と比べ、更に115%の能力向上を果たしている他、コクピットのアマツカゼ軽には強力な小児用強心剤とアドレナリン、半神経接続システムやレーダーシステムの強化、ブルートモードの搭載も目を引く。メインカラーはパステルグリーン。<br>
+        F型:空戦特化の調整が加えられ、頭部形状はVF-31Jを想起させる。一般機と比べ空戦性能は68%上昇してる。<br>
+        C型:制空戦闘特化の調整が加えられた機体、頭部形状はVF-31C与YF-27を想起させる。F型との連携も視野に入れられている。<br>
+        E型:電子戦と早期警戒機の役割を持つ機体、後部座席のインターフェースはAWACS向けのものに変更されている。<br>
+        A型:頭部形状はVF-31AとVF-25Aを想起させる形状となっており、外観はE型と共通。一般機なため特筆すべき事項はない。<br>
+
+        <span class="section-title">【 武装 】</span>
+        ・頭部ガルザーGeZ15S(S型4門 F・C型2門 A・E型一門)<br>
+        ・ハワードLu-23F アサルトビームガンポッド<br>
+        ・八ツ菱 両腕部GaJ-8 30mm超電磁射出型エレクドマシンガン 『リタリエーション』<br>
+        ・高周波振動式アサルトナイフ『月影(ツキカゲ)』(結希の星今宵の技術とピンポイントバリア技術転用式のアサルトナイフの技術融合)<br>
+        ・クラウンアーク AMM-4A脚部多目的マイクロミサイルパレット<br>
+
+        <span class="section-title">【 防御装備 】</span>
+        ・防弾シールド×2<br>
+        ・BIGBOSSオモヒカネ工廠 タ式12系斥力装甲システム<br>
+        ・BIGBOSS/モルゲンレーテ/LAI 透過式VPS装甲皮膜<br>
+        ・BIGBOSS/モルゲンレーテ/LAI VPBX-F22 新型ピンポイントバリアシステム<br>
+        ・BIGBOSSオモヒカネ工廠 アクティブステルスシステム<br>
+        ・BIGBOSS HDJM-42Fチャフアンドフレア<br>
+
+        <span class="section-title">【 追加装備 】</span>
+        ■ ハイマニューババッケージ<br>
+        ・主翼部追加装甲内ロケットブースターエンジン×2<br>
+        ・脚部追加装甲内高精度バーニアスラスター×12<br>
+        <br>
+        ■ スーパーパック<br>
+        ・主翼部追加装甲内ロケットブースターエンジン×4<br>
+        ・脚部追加装甲<br>
+        ・増加マイクロミサイルパレット×4<br>
+        ・姿勢制御用追加装甲内高精度バーニアスラスター×64<br>
+        ・胸部追加装甲内マイクロミサイルパレット×2<br>
+        ・胸部追加装甲<br>
+        <br>
+        ■ アーマードパック<br>
+        ・主翼部追加装甲プラットフォーム内大型ロケットブースターエンジン×4<br>
+        ・主翼基部 増加ロケットブースターエンジン×2<br>
+        ・脚部増加装甲<br>
+        ・脚部増加ブースター兼姿勢制御用バーニアスラスター×8<br>
+        ・脚部大型マイクロミサイルパレット×6<br>
+        ・胸部増加装甲<br>
+        ・胸部増加装甲内大型マイクロミサイルパレット×2<br>
+        ・胸部追加装甲内中型マイクロミサイルパレット×2<br>
+        ・新型MDEビーム砲塔(マルチパーパスコンテナ)<br>
+        ・主翼部追加装甲プラットフォームシステム<br>
+        ・回転式マイクロミサイルランチャー×8<br>
+        ・自由旋回型粒子ビーム砲×4<br>
+        <br>
+        ■ 外部装備(主翼下部)<br>
+        ・AIM-9サイドワインダー<br>
+        ・R-74M2<br>
+        ・AIM-260<br>
+        ・99式空対空誘導弾改<br>
+        ・R-77M<br>
+        <br>
+        ■ 選択式兵装<br>
+        ・ビフォーズCIMM-5A/A マイクロミサイル<br>
+        ・ラミントンHMM-7C 近接マイクロミサイル<br>
+
+        <span class="section-title">【 S²CM²について 】</span>
+        超鋼カーボン混合材<br>
+        略称はS²CM²(二乗表記の方が正式略称になりつつある)<br>
+        BIGBOSS社の開発した万能金属資材。<br>
+        従来のカーボン系鋼材とは一線を画する耐久性、耐熱性、耐圧性、抗堪性、引っ張り体制など、様々な試験をパスし、今や続々と世界の装甲材や構造材はこれに置き換えられている。<br>
+        素材によって特性を変えることができ、一般的なチタンとアルミセラミック、タングステンの組み合わせや、軽量特化のアルミタングステンの組み合わせなど、多岐に渡る組み合わせが存在する。<br>
+        BIGBOSS社がデモンストレーションとして、B-747の構造材と表面をこれらに置き換え、448トンだった機体が108トンにまで軽量化された。<br>
+
+        <span class="section-title">【 アマツカゼシステムについて 】</span>
+        最大全高:2.3m<br>
+        最大全幅:1.2m(主翼と兵装ステーション含めず)<br>
+        全備重量:1.6t<br>
+        動力:Pリアクター<br>
+        推進器:F135改nano 空間対応型<br>
+        総推進力:19.8t/s<br>
+        装甲箇所(展開格納可能):胸部 腹部(細分化されているが隙間には軟化S²CM²がシャッターのように下ろされるので問題なし) 頭部 肩部(従来のEXギアのようにシート時肩の場所を構成する) 大腿部 腰部 脚部 二の腕 前腕部<br>
+        関節保護装甲:軟化S²CM²<br>
+        装甲:S²CM²<br>
+        関節駆動方式:ハイスピードハイトルクサーボ 外骨格内部のS²CM²で構成された筋繊維ユニット<br>
+        対応機種:EXギアシステム対応機、VF-31Xs、KoB-02などのアマツカゼ軽対応機<br>
+        搭載武装数:6<br>
+        固定武装:両側頭部回転式パルスレーザー砲<br>
+        分類:パペット(着用式パワードスーツを指す)<br>
+
+        <span class="section-title">【 解説 】</span>
+        結希のアマツカゼとそのインナーパワードスーツアマツカゼ軽を量産化出来るようにBIGBOSS社がEXギアシステムの設計思想を元にアマツカゼ軽の思想を組み合わせて完成させた。派生型EXギアシステム、外骨格式他機能強化装具、パワードスーツ、パペットの一種である。<br>
+        背部に折りたたみ式の垂直尾翼2枚と、折りたたみ式の中型主翼を集約した動力推進ユニットを装着している。<br>
+        推進系は大腿部のF135改nanoに加え、2次元方向の推進ベクトル偏向ノズルを搭載した熱核惑星ロケットエンジン3基を搭載。<br>
+        兵装ステーションはなるべく小型に収納できるようにしており、大きすぎた場合1度四次元量子空間で粒子として転送するので安心。<br>
+        EXギアとしての機能は健在で、さらに進化している他、パワードスーツ時のヘルメットを保護するシェルバイザーは、顔面が位置する装甲内部はモニターとなっており、様々な情報を投影可能。シェルバイザーの機能は他にもあり、複合光学センサー(ツインアイ内蔵のバイザータイプ)やヘルメットの無線機能の強化、視界外の敵の検知と警告表示、兵装ステーションと対応した銃器の連携による残弾表示とFCS情報の投影など様々である。<br>
+        結希の専用の物は装甲圧をそのままに、軽量、高強度化タイプのS²CM²をふんだんに使用し、指揮管制能力や生命維持能力等を最大化した実質ワンオフモデルを使用している他、カラーリングはパールホワイトを基調としつつB2FBA5のパステルグリーンを差し色に使用している他、関節モーター部は金で作られている。<br>
+        これは成金アピールではなく、関節駆動系のベアリングの素材検証も兼ねているからである。<br>
+        本人談では「金の素材の方がハード的な反応速度と速度向上が見込めた気がするしストフリみたいでかっこいい」と評している。<br>
+
+        <span class="section-title">【 弾薬とエンジン 】</span>
+        ■ 劣化ウラン製徹甲焼夷破甲榴弾<br>
+        開発:エンジニア部<br>
+        開発支援:BIGBOSS社 アモワークス<br>
+        略称: DU-API-HE<br>
+        対人使用や対人使用を同時にこなせる弾種として開発された種類。<br>
+        劣化ウランで作られているのには、結希の負の人格形態が影響を与えたものと推察される。<br>
+        特長は徹甲弾や破甲榴弾、焼夷弾などの特性をいいバランスで統合しつつ、劣化ウランの高い貫通力も合わせることで実現した破壊性能と、着弾後テルミット反応で弾頭内部の高濃度爆薬や目標内部に超高温の炎を生成、爆薬に着火すると内部から爆発するように破裂する。<br>
+        <br>
+        ■ F135改<br>
+        分類:複合ジェットエンジン<br>
+        一基あたりの推力:F-15が5機とランボルギーニの最新型19台相当<br>
+        燃料効率:78%<br>
+        アフターバーナーの色:紫<br>
+        製造:BIGBOSS社<br>
+        対応燃料:液体水素ロケット燃料 高圧縮液体水素ジェット燃料<br>
+
+        <span class="section-title">【 KoB-02 ニンジャ 】</span>
+        全高:8.2m / 全幅:5.4m<br>
+        開発と製造:BIGBOSS社<br>
+        ジェネレーター:プラネットリアクタースモゥル<br>
+        推進器のエンジン:F135改 宇宙空間対応形×4<br>
+        基本重量:9.4t<br>
+        推進器不使用時最大跳躍高:85m<br>
+        推力:F-15EXの約12倍<br>
+        最大走行速度(推進器を使わない脚部での自走の場合):680km/h<br>
+        無補給無整備での最低保証作戦時間:640時間<br>
+        コクピットシステム:EXギアシステム もしくは アマツカゼシステム<br>
+        コクピット補助システム:セミアクティブスレイブ<br>
+        分類:フィギュア(8m前後のASやレイバー、エステバリスなどに代表される小型機を指す)<br>
+        固定兵装:AIMG-86 両側頭部12.7mmバルカン 両腕部ロケットアンカーアンドワイヤーソー<br>
+        <br>
+        ■ 武装<br>
+        ・FEDB-35-2 45mmブルパップアサルトライフル<br>
+        ・ダーフォス23-8 65mm滑腔砲<br>
+        ・ダーフォス:22-8 デカタイラント 65mm散弾銃<br>
+        ・SSA S-52 4連装サイドワインダーランチャー<br>
+        ・SSA D-53 8連アムラームランチャー<br>
+        ・BBBT(BIGBOSS BLADE TEAM)-86 カゲロウ 星今宵型フィギュア用超高周波ブレード<br>
+        ・BBBT-82 ヒットマン 単分子ナイフ<br>
+        ・ADT-98 対ADTANKダガー<br>
+        <br>
+        ■ 解説<br>
+        BIGBOSSがASやレイバー、エステバリスシリーズに変わる新型汎用機を作りたいと思い計画、設計、製造された機体。<br>
+        頭部形状はARX-8レーバテインを彷彿とさせるが、センサー部はバイザーで覆われ、バイザー内部の先端部にはモノアイが追加配置されているのが特徴。<br>
+        機体の脚部と肩部各所には機動スラスターが配置され、背部は推進器とそのエンジンを収めるバックパックがついており、内蔵された主翼と垂直尾翼を展開することにより単独飛行が可能になるほか、空間戦闘では翼部にも搭載されたスラスターがAMBACの補助にもなるため使い所によっては搭乗者の練度が表れる。<br>
+        機体制御システム自体は既存のEX-ギアシステムやそれの派生型であるアマツカゼシステムを使用し、補助としてスーツからの筋電情報を元にしたセミアクティブスレイブシステムを搭載し、ASからの機種転換訓練短縮にも一役買っている。<br>
+
+        <div class="server-board" style="max-width: 100%;">
+            <span style="color: #58a6ff; font-weight: bold;">[ SYSTEM NOTICE: HTTP_COOKIE_POLICY ]</span><br>
+            当サイトのホストは、電子的なクッキーよりもアイスなどのスイーツと午後の紅茶ミルクティーを欲しています。差し入れは多分24時間受け付け中です。
         </div>
-                        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://cdn.discordapp.com/attachments/1454736510124556392/1558102442892075091/214_20261009220104.png" width="60" height="60" alt="github"><br>
-            <a href="https://hdkyuuuki144.github.io/LocalMulti-Enigmatic-tool-Encrypted/" target="_blank">暗号等マルチツール</a>
+
+        <div style="margin-top: 50px; padding-top: 10px; border-top: 1px solid #30363d; font-size: 0.75em; color: #8b949e;">
+            <p>
+                【 使用フォント・ライセンス情報 】<br>
+                本サイトでは、もじワク研究による「マキナス 4-Square」を使用しています。<br>
+                ライセンス元：<a href="https://moji-waku.com/makinas/" target="_blank">もじワク研究</a><br>
+                制作協力: Gemini
+            </p>
+            <p>
+                -- End of Data --<br>
+                Created by Yuuki Sumi / Status: Licensed
+            </p>
         </div>
-        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/1280px-Bluesky_Logo.svg.png" width="60" height="60" alt="Bluesky"><br>
-            <a href="https://bsky.app/profile/hdkyuuki144.bsky.social" target="_blank">Bluesky</a>
-        </div>
-        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1280px-Instagram_icon.png" width="60" height="60" alt="Instagram"><br>
-            <a href="https://www.instagram.com/hdkyuuuki256?igsh=MWRuZm9iMmpsZGJ3ZA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-        </div>
-        <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="60" height="60" alt="YouTube"><br>
-            <a href="https://www.youtube.com/@yuuukihazuki_kai2" target="_blank">YouTube</a>
-        </div>
-              <div style="display: inline-block; text-align: center; margin-right: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="60" height="60" alt="YouTube視聴垢"><br>
-            <a href="https://www.youtube.com/@hazukiyuuki_144watch" target="_blank">YouTube 視聴垢</a>
-        </div>
-        <div style="display: inline-block; text-align: center;">
-            <img src="https://prtimes.jp/data/corp/137834/logo/pc-4a9a3b12290f39157f07093cc4da5b7b-8af99f7f3780308d19df97d0936194af.png?auto=avif" width="60" height="60" alt="Misskey"><br>
-            <a href="https://misskey.io/@hdkyuuuki144" target="_blank">Misskey</a>
-        </div>
-              <div style="display: inline-block; text-align: center;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGE9xGgsCYoXs0_m4za_IanQe5hMI2tzH_Lh23BcXMQ&s=10" width="60" height="60" alt="NicoNico"><br>
-            <a href="https://www.nicovideo.jp/user/128581420" target="_blank">NicoNico</a>
-        </div>
-<div class="server-board" style="
-    border: 1px solid #333;
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    padding: 20px;
-    max-width: 500px;
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
-">
-    <h2 style="color: #00ff41; border-bottom: 1px solid #00ff41; padding-bottom: 5px; margin-top: 0;">
-        🛰️ SYSTEM STATUS: TUNE
-    </h2>
-    
-    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
-        <tr style="border-bottom: 1px solid #222;">
-            <td style="padding: 8px; font-weight: bold; color: #888;">IP ADDRESS</td>
-            <td style="padding: 8px; font-family: monospace;">61.21.137.107:25565</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #222;">
-            <td style="padding: 8px; font-weight: bold; color: #888;">VERSION</td>
-            <td style="padding: 8px;">1.26(JAVA Edition)</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #222;">
-            <td style="padding: 8px; font-weight: bold; color: #888;">ENGINE</td>
-            <td style="padding: 8px;">Paper (Optimized)</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #222;">
-            <td style="padding: 8px; font-weight: bold; color: #888;">CAPACITY</td>
-            <td style="padding: 8px;">Max 35 Units</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #222;">
-            <td style="padding: 8px; font-weight: bold; color: #888;">DIFFICULTY</td>
-            <td style="padding: 8px;">休止中</td>
-        </tr>
-        <tr>
-            <td style="padding: 8px; font-weight: bold; color: #888;">SPAWN POINT/CONTACT</td>
-            <td style="padding: 8px;">X: 0 / Z: 0 (Central Hub)/hazuki.yuuki.144@gmail.com</td>
-        </tr>
-    </table>
-
-    <div style="margin-top: 20px; font-size: 0.8em; color: #555; text-align: right;">
-        Logged at: 2026.03.24 13:42 // Command Unit
-    </div>
-</div>
-    <span class="section-title">【 独自改良機:VF-31Xsグードルーン 】</span>
-<br>VF-31Xs グードルーン
-
-<br>設計&開発:BIGBOSS社 銀河工廠 アンタレスワークス コノエエンジニアズ
-<br>製造:BIGBOSS社 VF系機体製造部門
-<br>搭載エンジン:BIGBOSS/新星/八ツ菱 ステージ2S FF-3003X/FC3 惑星波動核融合式還流タービンエンジン×4
-<br>全高(ファイター):3.86m
-<br>全高(バトロイド、頭部機銃含まず):15.34m
-<br>全長(ファイター):19.31m
-<br>全幅(ファイター):14.86m
-<br>空虚重量(全種類の燃料満載 マルチパーパスコンテナなし 武装全搭載 追加パックなし)
-<br>S・C・A型:7558kg
-<br>F・E型:7671kg
-<br>S型結希機:7869kg
-<br>慣性制御:BIGBOSS ISC-52X(最大設計限界速度の3倍のGを12年間貯蔵可能)
-<br>慣性制御:機体構造材(の素材による副次的な超高性能ISC機能)とコクピット周辺にコーティングされたGN粒子
-<br>副機:F305改Nano 高機動ヴァリアブルバーニアスラスター スラストリバーサー&3D高機動ノズル
-<br>通常時最高速:M11+
-ワープアフターバーナー/ワープ/フォールド航法時最高速:光速の550万倍
-最大設計限界速度:光速の893万倍
-<br>使用燃料:1ccの吸気した空気(9ヶ月) 0.1ccの真空(真空からエンジンが波動エネルギーとしてもエネルギーを取り出しているため12ヶ月と50時間) 高濃度高圧縮液化水酸(空間機動時の副機スラスター用 下手に動かしまくっても10ヶ月は持つ)
-<br>構造材:S²CM²VPS・エネルギー転換対応型サイコフレーム・粒子状フォールドクォーツ混合型
-<br>装甲:S²CM²基本式エネルギー転換・斥力装甲
-<br>OS:ウリエル バージョンヴェイタ
-<br>操縦系:EXギア またはアマツカゼ軽、アマツカゼシステム
-<br>機能:分子構造変化式皮膜によるカラー変更機能(光学迷彩としても使用可能でパーソナルマークも印刷可能)
-<br>機能:擬似全天周モニター(VF-31AXとほぼ同じだが、インターフェースの改良や既存の操作インターフェースを活用し、空中投影してるような表示にし、戦闘を妨げないようにしている。)
-<br>隠し機能(結希機のみ):ブルートモード
-頭部のバイザーセンサが格納されツインアイが露出、フェイスマスクが展開。人の口を想起させるような形状と口腔内からの強制排気で、さながら獣のように振る舞う。
-結希機のみに実装された機能で、脚部のエンジン出力が上昇し、形態はバトロイドに固定される。
- <span class="section-title">【 バリエーション 】</span>
-<br>S型:指揮官機で、頭部形状はYF-29を想起させる。主に通信能力と指揮管制能力の向上、電子戦機との連携能力向上と、エンジン周りと駆動系のソフトウェアリミッター解除が実施される他、ファイター形態とバトロイド形態時、専用ソフトウェアにより一般機と比較して最大115%の能力向上が見込める
-<br>S型結希機:蔑称、あの世行きの翡翠色の切符。この機体がそう呼ばれる所以は専用モデルとしてあつらえられ、その上最適化がこの上ないほど施された機体が結希を持つと他の機より比べ物にならないくらい被害を出すためである。
-頭部形状に差異はないが、バイザーセンサー内にツインアイを搭載しており、フェイスマスクの展開変形機構も有している他、通常のS型と比べ、更に115%の能力向上を果たしている他、コクピットのアマツカゼ軽には強力な小児用強心剤とアドレナリン、半神経接続システムやレーダーシステムの強化、ブルートモードの搭載も目を引く。メインカラーはパステルグリーン。
-<br>F型:空戦特化の調整が加えられ、頭部形状はVF-31Jを想起させる。一般機と比べ空戦性能は68%上昇してる。
-<br>C型:制空戦闘特化の調整が加えられた機体、頭部形状はVF-31CとYF-27を想起させる。F型との連携も視野に入れられている。
-<br>E型:電子戦と早期警戒機の役割を持つ機体、後部座席のインターフェースはAWACS向けのものに変更されている。
-<br>A型:頭部形状はVF-31AとVF-25Aを想起させる形状となっており、外観はE型と共通。一般機なため特筆すべき事項はない。
-
- <span class="section-title">【 武装 】</span>
-<br>頭部ガルザーGeZ15S(S型4門 F・C型2門 A・E型一門)
-<br>ハワードLu-23F アサルトビームガンポッド
-<br>八ツ菱 両腕部GaJ-8 30mm超電磁射出型エレクドマシンガン 『リタリエーション』
-<br>高周波振動式アサルトナイフ『月影(ツキカゲ)』(結希の星今宵の技術とピンポイントバリア技術転用式のアサルトナイフの技術融合)
-<br>クラウンアーク AMM-4A脚部多目的マイクロミサイルパレット
-
- <span class="section-title">【 防御装備 】</span>
-<br>防弾シールド×2
-<br>BIGBOSSオモヒカネ工廠 タ式12系斥力装甲システム
-<br>BIGBOSS/モルゲンレーテ/LAI 透過式VPS装甲皮膜
-<br>BIGBOSS/モルゲンレーテ/LAI VPBX-F22 新型ピンポイントバリアシステム
-<br>BIGBOSSオモヒカネ工廠 アクティブステルスシステム
-<br>BIGBOSS HDJM-42Fチャフアンドフレア
-<br>
-
- <span class="section-title">【 追加装備 】</span>
-<br>
-<br>ハイマニューババッケージ
-<br>主翼部追加装甲内ロケットブースターエンジン×2
-<br>脚部追加装甲内高精度バーニアスラスター×12
-<br>
-<br>スーパーパック
-<br>主翼部追加装甲内ロケットブースターエンジン×4
-<br>脚部追加装甲
-<br>増加マイクロミサイルパレット×4
-<br>姿勢制御用追加装甲内高精度バーニアスラスター×64
-<br>胸部追加装甲内マイクロミサイルパレット×2
-<br>胸部追加装甲
-<br>
-<br>アーマードパック
-<br>主翼部追加装甲プラットフォーム内大型ロケットブースターエンジン×4
-<br>主翼基部 増加ロケットブースターエンジン×2
-<br>脚部増加装甲
-<br>脚部増加ブースター兼姿勢制御用バーニアスラスター×8
-<br>脚部大型マイクロミサイルパレット×6
-<br>胸部増加装甲
-<br>胸部増加装甲内大型マイクロミサイルパレット×2
-<br>胸部追加装甲内中型マイクロミサイルパレット×2
-<br>新型MDEビーム砲塔(マルチパーパスコンテナ)
-<br>主翼部追加装甲プラットフォームシステム
-<br>回転式マイクロミサイルランチャー×8
-<br>自由旋回型粒子ビーム砲×4
-<br>
-<br>外部装備(主翼下部)
-<br>AIM-9サイドワインダー
-<br>R-74M2
-<br>AIM-260
-<br>99式空対空誘導弾改
-<br>R-77M
-<br>
-<br>選択式兵装
-<br>ビフォーズCIMM-5A/A マイクロミサイル
-<br>ラミントンHMM-7C 近接マイクロミサイル
-<br>
-<br> <span class="section-title">【 S²CM²について 】</span>
-<br>超鋼カーボン混合材
-
-
-<br>略称はS²CM²(二乗表記の方が正式略称になりつつある)
-<br>BIGBOSS社の開発した万能金属資材。
-<br>従来のカーボン系鋼材とは一線を画する耐久性、耐熱性、耐圧性、抗堪性、引っ張り体制など、様々な試験をパスし、今や続々と世界の装甲材や構造材はこれに置き換えられている。
-<br>素材によって特性を変えることができ、
-一般的なチタンとアルミセラミック、タングステンの組み合わせや、
-軽量特化のアルミタングステンの組み合わせなど、多岐に渡る組み合わせが存在する。
-<br>BIGBOSS社がデモンストレーションとして、B-747の構造材と表面をこれらに置き換えると、448トンだった機体が108トンにまで軽量化された。
-<br> <span class="section-title">【 アマツカゼシステムについて 】</span>
-<br>
-
-<br>最大全高:2.3m
-<br>最大全幅:1.2m(主翼と兵装ステーション含めず)
-<br>全備重量:1.6t
-<br>動力:Pリアクター
-<br>推進器:F135改nano 空間対応型
-<br>総推進力:19.8t/s
-<br>装甲箇所(展開格納可能):胸部 腹部(細分化されているが隙間には軟化S²CM²がシャッターのように下ろされるので問題なし) 頭部 肩部(従来のEXギアのようにシート時肩の場所を構成する) 大腿部 腰部 脚部 二の腕 前腕部
-<br>関節保護装甲:軟化S²CM²
-<br>装甲:S²CM²
-<br>関節駆動方式:ハイスピードハイトルクサーボ 外骨格内部のS²CM²で構成された筋繊維ユニット
-<br>対応機種:EXギアシステム対応機、VF-31Xs、KoB-02などのアマツカゼ軽対応機
-<br>搭載武装数:6
-<br>固定武装:両側頭部回転式パルスレーザー砲
-<br>分類:パペット(着用式パワードスーツを指す)
-
-<br><br> <span class="section-title">【 解説 】</span>
-<br>結希のアマツカゼとそのインナーパワードスーツアマツカゼ軽を量産化出来るようにBIGBOSS社がEXギアシステムの設計思想を元にアマツカゼ軽の思想を組み合わせて完成させた。派生型EXギアシステム、外骨格式他機能強化装具、パワードスーツ、パペットの一種である。
-<br>背部に折りたたみ式の垂直尾翼2枚と、
-折りたたみ式の中型主翼を集約した動力推進ユニットを装着している。
-<br>推進系は大腿部のF135改nanoに加え、2次元方向の推進ベクトル偏向ノズルを搭載した熱核惑星ロケットエンジン3基を搭載。
-<br>兵装ステーションはなるべく小型に収納できるようにしており、大きすぎた場合1度四次元量子空間で粒子として転送するので安心。
-<br>EXギアとしての機能は健在で、さらに進化している他、パワードスーツ時のヘルメットを保護するシェルバイザーは、顔面が位置する装甲内部はモニターとなっており、様々な情報を投影可能。シェルバイザーの機能は他にもあり、複合光学センサー(ツインアイ内蔵のバイザータイプ)やヘルメットの無線機能の強化、視界外の敵の検知と警告表示、兵装ステーションと対応した銃器の連携による残弾表示とFCS情報の投影など様々である。
-<br>結希の専用の物は装甲圧をそのままに、軽量、高強度化タイプのS²CM²をふんだんに使用し、指揮管制能力や生命維持能力等を最大化した実質ワンオフモデルを使用している他、カラーリングはパールホワイトを基調としつつB2FBA5のパステルグリーンを差し色に使用している他、関節モーター部は金で作られている。
-<br>これは成金アピールではなく、関節駆動系のベアリングの素材検証も兼ねているからである。
-<br>本人談では「金の素材の方がハード的な反応速度と速度向上が見込めた気がするしストフリみたいでかっこいい」と評している。
-<br>
-<br> <span class="section-title">【弾薬とエンジン】</span>
-<br>
-<br>劣化ウラン製徹甲焼夷破甲榴弾
-<br>
-<br>開発:エンジニア部
-<br>開発支援:BIGBOSS社 アモワークス
-<br>略称: DU-API-HE
-<br>対人使用や対人使用を同時にこなせる弾種として開発された種類。
-<br>劣化ウランで作られているのには、結希の負の人格形態が影響を与えたものと推察される。
-<br>特長は徹甲弾や破甲榴弾、焼夷弾などの特性をいいバランスで統合しつつ、劣化ウランの高い貫通力も合わせることで実現した破壊性能と、着弾後テルミット反応で弾頭内部の高濃度爆薬や目標内部に超高温の炎を生成、爆薬に着火すると内部から爆発するように破裂する。
-<br>
-<br>F135改
-<br>
-<br>分類:複合ジェットエンジン
-<br>一基あたりの推力:F-15が5機とランボルギーニの最新型19台相当
-<br>燃料効率:78%
-<br>アフターバーナーの色:紫
-<br>製造:BIGBOSS社
-<br>対応燃料:液体水素ロケット燃料 高圧縮液体水素ジェット燃料
-<br>
-<br> <span class="section-title">【 KoB-02 ニンジャ 】</span>
-<br>全高:8.2m
-<br>全幅:5.4m
-<br>開発と製造:BIGBOSS社
-<br>ジェネレーター:プラネットリアクタースモゥル
-<br>推進器のエンジン:F135改 宇宙空間対応形×4
-<br>基本重量:9.4t
-<br>推進器不使用時最大跳躍高:85m
-<br>推力:F-15EXの約12倍
-<br>最大走行速度(推進器を使わない脚部での自走の場合):680km/h
-<br>無補給無整備での最低保証作戦時間:640時間
-<br>コクピットシステム:EXギアシステム もしくは アマツカゼシステム
-<br>コクピット補助システム:セミアクティブスレイブ
-<br>分類:フィギュア(8m前後のASやレイバー、エステバリスなどに代表される小型機を指す)
-<br>固定兵装:AIMG-86 両側頭部12.7mmバルカン 両腕部ロケットアンカーアンドワイヤーソー
-<br> <span class="section-title">【 武装 】</span>
-<br>FEDB-35-2 45mmブルパップアサルトライフル
-<br>ダーフォス23-8 65mm滑腔砲
-<br>ダーフォス:22-8 デカタイラント 65mm散弾銃
-<br>SSA S-52 4連装サイドワインダーランチャー
-<br>SSA D-53 8連アムラームランチャー
-<br>BBBT(BIGBOSS BLADE TEAM)-86 カゲロウ 星今宵型フィギュア用超高周波ブレード
-<br>BBBT-82 ヒットマン 単分子ナイフ
-<br>ADT-98 対ADTANKダガー
-<br>
-<br> <span class="section-title">【 解説 】</span>
-<br>BIGBOSSがASやレイバー、エステバリスシリーズに変わる新型汎用機を作りたいと思い計画、設計、製造された機体、
-<br>頭部形状はARX-8レーバテインを彷彿とさせるが、センサー部はバイザーで覆われ、バイザー内部の先端部にはモノアイが追加配置されているのが特徴。
-<br>機体の脚部と肩部各所には機動スラスターが配置され、背部は推進器とそのエンジンを収めるバックパックがついており、内蔵された主翼と垂直尾翼を展開することにより単独飛行が可能になる他、<br>空間戦闘では翼部にも搭載されたスラスターがAMBACの補助にもなるため使い所によっては搭乗者の練度が表れる。
-<br>機体制御システム自体は既存のEX-ギアシステムやそれの派生型であるアマツカゼシステムを使用し、<br>補助としてスーツからの筋電情報を元にしたセミアクティブスレイブシステムを搭載し、ASからの機種転換訓練短縮にも一役買っている。
-
-<div style="margin-top: 30px; border: 1px dashed #58a6ff; padding: 15px; background-color: rgba(88, 166, 255, 0.05);">
-    <span style="color: #58a6ff; font-weight: bold;">[ SYSTEM NOTICE: HTTP_COOKIE_POLICY ]</span><br>
-    当サイトのホストは、電子的なクッキーよりもアイスなどのスイーツと午後の紅茶ミルクティーを欲しています。差し入れは多分24時間受け付け中です。
-</div>
-    <div style="margin-top: 50px; padding-top: 10px; border-top: 1px solid #30363d; font-size: 0.75em; color: #8b949e;">
-        <p>
-            【 使用フォント・ライセンス情報 】<br>
-            本サイトでは、もじワク研究による「マキナス 4-Square」を使用しています。<br>
-            ライセンス元：<a href="https://moji-waku.com/makinas/" target="_blank">もじワク研究</a>
-          <br>制作協力;Gemini
-        </p>
-        <p>
-            -- End of Data --<br>
-            Created by Yuuki Sumi / Status: Licensed
-        </p>
     </div>
 </body>
 </html>
